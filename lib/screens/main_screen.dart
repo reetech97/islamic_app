@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:islami_app/screens/tabs/ahadeth_tab.dart';
 import 'package:islami_app/screens/tabs/quran_tab.dart';
 
 class MainScreen extends StatefulWidget {
@@ -22,10 +23,7 @@ class _MainScreenState extends State<MainScreen> {
       'Index 1: Business',
       style: optionStyle,
     ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    AhadethTab(),
     QuranTab(),
     Text(
       'Index 4: School',
@@ -47,6 +45,7 @@ class _MainScreenState extends State<MainScreen> {
         image: DecorationImage(
           image: AssetImage("assets/images/default_bg.png"),
           fit: BoxFit.cover,
+          alignment: Alignment.topCenter
         )
       ),
       child: Scaffold(
@@ -68,7 +67,7 @@ class _MainScreenState extends State<MainScreen> {
             ),
             BottomNavigationBarItem(
               icon: ImageIcon(AssetImage("assets/images/icon_hadeth.png",)),
-              label: 'الحديث',
+              label: 'الأحاديث',
             ),
             BottomNavigationBarItem(
               icon: ImageIcon(AssetImage("assets/images/icon_quran.png",)),
