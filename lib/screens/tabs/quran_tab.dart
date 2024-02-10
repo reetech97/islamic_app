@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/constants/app_theme.dart';
 import 'package:islami_app/constants/data.dart';
+import 'package:islami_app/screens/surah_screen.dart';
 
 class QuranTab extends StatefulWidget {
   const QuranTab({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class _QuranTabState extends State<QuranTab> {
               dividerThickness: 0,
               showBottomBorder: false,
               columnSpacing: 0,
-              // headingRowHeight: 40,
+              showCheckboxColumn: false,
               horizontalMargin: 0,
               border: TableBorder(
                 verticalInside: BorderSide(
@@ -88,6 +89,11 @@ class _QuranTabState extends State<QuranTab> {
               rows: [
                 for (int i = 0; i < suraNames.length; i++)
                   DataRow(
+                    onSelectChanged: (value) {
+                      if(value == true) {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => SurahScreen(surahIdx: i),));
+                      }
+                    },
                     cells: [
                       DataCell(
                         Center(

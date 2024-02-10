@@ -20,6 +20,7 @@ final lightTheme = ThemeData(
   appBarTheme: const AppBarTheme(
     backgroundColor: Colors.transparent,
     centerTitle: true,
+    foregroundColor: Colors.black,
     titleTextStyle: TextStyle(
       color: onPrimarySelectedLight,
       fontSize: 24,
@@ -31,5 +32,10 @@ final lightTheme = ThemeData(
   dividerTheme: DividerThemeData(
     color: Colors.transparent,
     thickness: 0
+  ),
+  cardTheme: CardTheme(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(16)
+    )
   )
 );
