@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/screens/tabs/ahadeth_tab.dart';
 import 'package:islami_app/screens/tabs/quran_tab.dart';
+import 'package:islami_app/screens/tabs/radio_tab.dart';
 import 'package:islami_app/screens/tabs/sebha_tab.dart';
 
 class MainScreen extends StatefulWidget {
@@ -16,10 +17,7 @@ class _MainScreenState extends State<MainScreen> {
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    RadioTab(),
     SebhaTab(),
     AhadethTab(),
     QuranTab(),

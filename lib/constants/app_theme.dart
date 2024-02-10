@@ -45,5 +45,10 @@ final lightTheme = ThemeData(
         borderRadius: BorderRadius.circular(16)
       )
     )
+  ),
+  iconButtonTheme: IconButtonThemeData(
+    style: IconButton.styleFrom(
+      foregroundColor: primaryLight,
+    )
   )
 );
