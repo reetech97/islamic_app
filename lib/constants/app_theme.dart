@@ -37,5 +37,13 @@ final lightTheme = ThemeData(
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(16)
     )
+  ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      backgroundColor: primaryLight,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16)
+      )
+    )
   )
 );

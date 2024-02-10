@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/screens/tabs/ahadeth_tab.dart';
 import 'package:islami_app/screens/tabs/quran_tab.dart';
+import 'package:islami_app/screens/tabs/sebha_tab.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -19,10 +20,7 @@ class _MainScreenState extends State<MainScreen> {
       'Index 0: Home',
       style: optionStyle,
     ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    SebhaTab(),
     AhadethTab(),
     QuranTab(),
     Text(
